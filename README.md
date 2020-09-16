@@ -23,9 +23,9 @@ go build main.go -o go-gateway & ./go-gateway
 POST http://localhost:9000/createService
 
 BODY:
-```json
+```json5
 {
-    "name":"your service name"    
+    "name" : "your service name",    
     "apis": [
         {
             "name": "your api name",
@@ -44,9 +44,9 @@ BODY:
 POST http://localhost:9000/createAPI
 
 BODY:
-```json
+```json5
 {
-    "name": "your api name",
+    "name":"your api name",
     "service": "your api name",
     "protocol": "http", // or https
     "httpMethod": "GET", // or POST
@@ -62,7 +62,7 @@ BODY:
 example:
 
 API如下:
-```json
+```json5
 {
     "name": "createUser",
     "service": "userService",
